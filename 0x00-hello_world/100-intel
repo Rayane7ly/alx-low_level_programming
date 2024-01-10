@@ -1,5 +1,2 @@
-#!/bin/bash
-
-filename=$(basename -- "$CFILE")
-filename="${filename%.*}"
-gcc -S -o "$filename.s" $CFILE
+filename=$(basename -- "$CFILE" | cut -f 1 -d '.')
+gcc -S -o "$filename.s" "$CFILE"
