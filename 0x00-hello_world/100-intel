@@ -1,2 +1,2 @@
 #!/bin/bash
-filename=$(basename -- "$CFILE" | cut -f 1 -d '.') && gcc -S -o "$filename.s" "$CFILE" && indent -kr -nut "$filename.s"
+filename=$(basename -- "$CFILE" | cut -f 1 -d '.') && gcc -S -o "$filename.s" "$CFILE" && diff -wB "$filename.s" <(echo -e "$(main.s)")
