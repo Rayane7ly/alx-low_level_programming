@@ -1,2 +1,2 @@
-filename=$(basename -- "$CFILE" | cut -f 1 -d '.')
-gcc -S -o "$filename.s" "$CFILE"
+#!/bin/bash
+filename=$(basename -- "$CFILE" | cut -f 1 -d '.') && gcc -S -o "$filename.s" "$CFILE"
