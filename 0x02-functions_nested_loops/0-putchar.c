@@ -4,10 +4,10 @@
 /**
  * main - Entry point
  *
- * Description: print _putchar 
+ * Description: Prints "_putchar" followed by a new line.
  *
- * Return: Always 0 (success)
-*/
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
