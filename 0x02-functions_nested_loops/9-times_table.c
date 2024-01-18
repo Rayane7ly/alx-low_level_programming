@@ -6,32 +6,36 @@
  * Example table:
  * 0, 0, 0, 0, ..
  * 0, 1, 2, 3, ..
- *
-*/
-
+ */
 void times_table(void)
 {
-    int num, mult, prod;
+	/* Variables for multiplication */
+	int num, mult, prod;
 
-    for (num = 0; num <= 9; num++)
-    {
-        _putchar('0'); /* Print the first digit before the loop*/
+	/* Loop through each row */
+	for (num = 0; num <= 9; num++)
+	{
+		/* Print the first digit before the loop */
+		_putchar('0');
 
-        for (mult = 1; mult <= 9; mult++)
-        {
-            _putchar(',');
-            _putchar(' ');
+		/* Loop through each column */
+		for (mult = 1; mult <= 9; mult++)
+		{
+			/* Print comma and space between numbers */
+			_putchar(',');
+			_putchar(' ');
 
-            prod = num * mult;
+			/* Calculate product */
+			prod = num * mult;
 
-            /* Put space if the product is a single digit number*/
-            if (prod <= 9)
-                _putchar(' ');
-            else
-                _putchar((prod / 10) + '0'); /* Get the first digit*/
+			/* Put space if the product is a single-digit number */
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + '0'); /* Get the first digit */
 
-            _putchar((prod % 10) + '0'); /* Get the second digit*/
-        }
-        _putchar('\n');
-    }
+			_putchar((prod % 10) + '0'); /* Get the second digit */
+		}
+		_putchar('\n'); /* Move to the next line for the next row */
+	}
 }
