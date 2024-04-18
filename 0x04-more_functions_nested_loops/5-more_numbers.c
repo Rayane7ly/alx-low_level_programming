@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
-/***/
+/**
+ * more_numbers - print numbers from 0 to 14 with only three _putchar
+*/
 void more_numbers(void)
 {
-	int row,num,count;
+	int row, num, count;
 
 	for (row = 0; row < 10; row++)
 	{
