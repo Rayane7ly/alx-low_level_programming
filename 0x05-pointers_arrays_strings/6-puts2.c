@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * puts2 - print every other character of the string
@@ -11,7 +12,7 @@ void puts2(char *str)
 
 	while (str[i] != '\0')
 	{
-		write(1, str[i], 1);
+		write(1, &str[i], 1);
 		i = i + 2;
 	}
 	putchar('\n');
